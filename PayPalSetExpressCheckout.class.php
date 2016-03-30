@@ -61,13 +61,16 @@ class PayPalSetExpressCheckout {
      */
     public function addNewItem($sNumber, $sName, $sDescription, $dAmt, $dQty)
     {
-        $this->aItems[] = (new PayPalItem())
-            ->setNumber($sNumber)
+        $item = new PayPalItem();
+
+        $item->setNumber($sNumber)
             ->setName($sName)
             ->setDescription($sDescription)
             ->setAmt($dAmt)
             ->setQty($dQty)
             ->validate();
+
+        $this->aItems[] = $item;
 
         return $this;
     }
