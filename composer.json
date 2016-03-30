@@ -1,0 +1,11 @@
+{
+	"name": "hanischit/paypal",
+	"autoload": {
+        "psr-4": {
+            "HanischIT\\PayPal\\": "/"
+        }
+    },
+    "require": {
+	  "php": ">= 5.3"
+	}
+}
